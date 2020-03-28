@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700,900&display=swap');
+
+:root {
+    --font-title: 'Pacifico', cursive;
+    --font: 'Raleway', sans-serif;
+    --grey: #262626;
+    --red: #ff6833;
+    --blue: #00c4c4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background: #f9f8fb url('../img/header-bg.jpg') no-repeat center;
+    height: 100vh;
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+    color: var(--grey);
+    font: 50px var(--font-title);
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__item {
+    margin: 0 20px;
+}
+
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.menu__link {
+    color: var(--grey);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu__link::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--red);
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transition: .3s;
+}
+
+.menu__link:hover::before, .menu__link--active::before {
+    width: calc(100% + 6px);
+    top: -10px;
+    left: -2px;
+}
+
+.info-box {
+    color: var(--grey);
+    margin-top: 20vh;
+}
+
+.info-box__title {
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.info-box__desc {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 28px;
+}
+
+.button {
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: var(--red);
+    padding: 18px 25px;
+    color: #fff;
+    display: inline-block;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    transition: .3s;
+}
+
+.button:hover {
+    background: var(--blue);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s ease-in-out infinite;
+}
+
+.scroll-down svg {
+    width: 24px;
+    height: 40px;
+    transition: .3s;
+}
+
+.scroll-down:hover svg {
+    fill: var(--blue);
+}
+
+@keyframes scroll {
+    0% {
+        bottom: 6%;
+    }
+    50% {
+        bottom: 4%;
+    }
+    100% {
+        bottom: 6%;
+    }
+}
