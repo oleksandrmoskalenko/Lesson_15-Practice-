@@ -25,6 +25,8 @@ a {
     color: inherit;
 }
 
+/* HEADER */
+
 .header {
     background: #f9f8fb url('../img/header-bg.jpg') no-repeat center;
     height: 100vh;
@@ -145,6 +147,8 @@ a {
     }
 }
 
+/* ABOUT US */
+
 .about {
     color: #fff;
     background-color: #00c4c4;
@@ -171,6 +175,8 @@ a {
     margin-bottom: 15px;
 }
 
+/* FOOTER */
+
 .footer {
     background: var(--grey);
     color: #b9b9b9;
@@ -196,6 +202,8 @@ a {
 .text-bold {
     font-weight: 700;
 }
+
+/* GALLERY */
 
 .gallery {
     background-color: #ffe92f;
@@ -251,6 +259,8 @@ a {
     background-color: #2647a3;
 }
 
+/* SUBSCRIBE TO US */
+
 .subscribe {
     background: url(../img/subscribe-bg.jpg) no-repeat center center;
     height: 500px;
@@ -305,6 +315,185 @@ a {
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* .subscribe__button:active {
+.subscribe__button:active {
     background-color: #387a1a;
-} */
+}
+
+/* OUR SERVICES */
+
+.services {
+    background-color: #70bfff;
+}
+
+.services__row {
+    background: url('../img/services-bg.png') no-repeat center right;
+    height: 790px;
+}
+
+.services__block {
+    padding: 70px 0 0 75px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.services__title {
+    font-weight: 700;
+    font-size: 90px;
+    color: #fff;
+    position: absolute;
+    top: 44%;
+    right: -140%;
+}
+
+
+
+
+.services__li {
+    width: 400px;
+    height: 100px;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.services__link {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+
+.services__li--title {
+    font-weight: 700;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.services__li--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: inherit;
+    border-left: 1px solid #9d9d9d;
+}
+
+/* BLOG */
+
+.blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 120px;
+    background-color: #b07cf7;
+    height: 864px;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    position: relative;
+    z-index: -2;
+}
+
+.blog__row {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog__article {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    /* width: 360px; */
+    height: 318px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.90));
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.blog__title, .blog__subtitle, .blog__post-date {
+    text-align: center;
+}
+
+.blog__post-date, button {
+    text-transform: uppercase;
+}
+
+.blog__title {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.blog__subtitle {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.47;
+    margin-bottom: 25px;
+}
+
+.blog__article--img {
+    position: absolute;
+    z-index: -1000;
+    width: 360px;
+    height: 318px;
+    z-index: -1;
+}
+
+.blog__post-date, .blog__post-header, .blog__post-footer {
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    line-height: 1.15;
+    left: 27px;
+}
+
+.blog__post-date {
+    width: 60px;
+    height: 60px;
+    padding: 0 8px 8px;
+    background-color: rgba(0,0,0,0.35);
+    top: 32px;
+    left: 32px;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+.blog__post-date--number {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.blog__post-header {
+    bottom: 55px;
+    font-weight: 700;
+}
+
+.blog__post-footer {
+    bottom: 25px;
+    font-size: 13px;
+}
+
+.blog__button {
+    justify-content: center;
+}
+
+.blog__button--style {
+    margin-top: 40px;
+    background-color: #f72b3c;
+    border: none;
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.blog__button--style:active {
+    background-color: #ee3948;
+}
