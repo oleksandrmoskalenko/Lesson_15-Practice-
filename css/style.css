@@ -346,23 +346,16 @@ a {
     right: -140%;
 }
 
-
-
-
 .services__li {
+    display: flex;
+    align-items: center;
+    height: inherit;
     width: 400px;
     height: 100px;
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
     background-color: #fff;
     margin-bottom: 20px;
 }
-
-.services__link {
-    display: flex;
-    align-items: center;
-    height: inherit;
-}
-
 
 .services__li--title {
     font-weight: 700;
@@ -386,14 +379,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 0 120px;
+    padding-top: 100px;
     background-color: #b07cf7;
     height: 864px;
     flex-direction: column;
     justify-content: space-around;
     color: #fff;
-    position: relative;
-    z-index: -2;
 }
 
 .blog__row {
@@ -401,6 +392,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 
 .blog__article {
@@ -434,7 +427,7 @@ a {
     font-size: 17px;
     font-weight: 300;
     line-height: 1.47;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
 }
 
 .blog__article--img {
@@ -480,20 +473,117 @@ a {
 }
 
 .blog__button {
-    justify-content: center;
-}
-
-.blog__button--style {
-    margin-top: 40px;
-    background-color: #f72b3c;
+    text-transform: uppercase;
+    background-color: #f72b3b;
+    font-family: inherit;
     border: none;
     width: 200px;
     height: 55px;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 200;
     color: #fff;
+    margin: 50px 0 120px;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-.blog__button--style:active {
-    background-color: #ee3948;
+.blog__row:last-of-type {
+    justify-content: center;
+}
+
+.blog__button:active {
+    background-color:#e91818;
+}
+
+/* CONTACT */
+
+.contact {
+    width: 100%;
+    height: 866px;
+    background: url(../img/contact-bg.jpg) no-repeat;
+    -moz-background-size: cover; /* Firefox 3.6+ */
+    -webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: cover; /* Opera 9.6+ */
+    background-size: cover; /* Современные браузеры */
+}
+
+.contact__header, .contact__block, .contact__form--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact__header {
+    padding: 100px 0 46px;
+}
+
+.contact__title {
+    font-size: 90px;
+    padding-bottom: 30px;
+}
+
+.contact__title + p, .contact__textarea, .contact__info > .contact__ul > .contact__li, .contact__form > .contact__form--form > .contact__input, .contact__form > .contact__form--form > .contact__textarea { font-weight: 300;}
+.contact__title, .contact__form > .contact__form--form :first-child, .contact__li > .contact__li--title { font-weight: 700;}
+
+.contact__title + p {
+    font-size: 17px;
+    text-align: center;
+}
+
+.contact__block {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.contact__form > form > .contact__input, .contact__textarea {
+    width: 500px;
+    height: 50px;
+    background-color: rgba(0, 196, 196, 0.45);
+    border: unset;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #fff;
+    filter: brightness(0.87);
+}
+
+.contact__textarea {
+    padding: 12px 0                                                              0 20px;
+    height: 250px;
+    font-size: 15px;
+}
+
+.contact__form > .contact__form--form > .contact__input::-webkit-input-placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;}
+.contact__form > .contact__form--form > .contact__input:-ms-input-placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;}
+.contact__form > .contact__form--form > .contact__input::-ms-input-placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;}
+.contact__form > .contact__form--form > .contact__input::placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;} 
+.contact__form > .contact__form--form > .contact__textarea::-webkit-input-placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;}
+.contact__form > .contact__form--form > .contact__textarea:-ms-input-placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;}
+.contact__form > .contact__form--form > .contact__textarea::-ms-input-placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;}
+.contact__form > .contact__form--form > .contact__textarea::placeholder { color: #fff; font-family: 'Raleway', sans-serif; font-size: 15px;} 
+
+.contact__form > .contact__form--form > .contact__input:focus { filter: none; cursor: pointer; background-color: rgba(0, 196, 196, 0.6);outline: none;
+    border-left: 5px solid #355b82;}
+.contact__form > .contact__form--form > .contact__textarea:focus { filter: none; cursor: pointer; background-color: rgba(0, 196, 196, 0.6);}
+
+.contact__info {
+    height: 170px;
+}
+
+.contact__info > .contact__ul > .contact__li {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact__li > .contact__li--title {
+    padding-bottom: 5px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.contact__li > .contact__value > .contact__link {
+    text-decoration: none;
+    color: #000;
 }
